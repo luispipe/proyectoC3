@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-
 from pathlib import Path
 from datetime import timedelta
 
@@ -22,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h=re)d4w3m78jl+u7sx-@jstae4=cd_gmd5n9a4xs5e3ha!s$+'
+SECRET_KEY = 'django-insecure-b)&!grzx_k283=0b!sw60og)0m5t)5pa^1w68cct67es-^^@+#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,17 +53,6 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
-REST_FRAMEWORK = {
-        'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-    ),
-        'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-
-AUTH_USER_MODEL= "authApp.User"
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,6 +62,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION_CLASSES': (
+            'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
+
+AUTH_USER_MODEL= 'authApp.User'
 
 ROOT_URLCONF = 'authProject.urls'
 
