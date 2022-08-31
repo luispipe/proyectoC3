@@ -17,14 +17,14 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.get(id=obj.id)
         account = Account.objects.get(user=obj.id)
         return {
-                'id': user.id,
-                'username': user.username,
-                'name': user.name,
-                'email': user.email,
-                'account': {
-                    'id': account.id,
-                    'balance': account.balance,
-                    'lastChangeDate': account.lastChangeDate,
-                    'isActive': account.isActive
+            'id': user.id,
+            'username': user.username,
+            'name': user.name,
+            'email': user.email,
+            'account': {
+                'id': account.id,
+                'balance': account.balance,
+                'lastChangeDate': account.lastChangeDate,
+                'isActive': account.isActive
                 }
         }

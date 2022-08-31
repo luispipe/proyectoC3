@@ -4,5 +4,3 @@ class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
         fields = ['balance', 'lastChangeDate', 'isActive']
-
-    
