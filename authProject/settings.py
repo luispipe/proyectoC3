@@ -27,7 +27,13 @@ SECRET_KEY = 'django-insecure-b)&!grzx_k283=0b!sw60og)0m5t)5pa^1w68cct67es-^^@+#
 DEBUG = True
 
 ALLOWED_HOSTS = []
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+  'http://localhost:8080/',
+  'http://localhost:8081/',
+  'http://localhost:8082/'
+)
+
 
 #Configuración despliegue FE local
 # Application definition
